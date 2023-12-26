@@ -1592,6 +1592,7 @@ textarea {
   border-radius: 10px;
   padding: 30px;
   background-color: #615f5f;
+  /*  width: 80%; */
 }
 .modal__descr {
   text-align: center;
@@ -1608,10 +1609,10 @@ textarea {
   position: absolute;
   top: 0;
   right: -40px;
-  font-size: 50px;
+  font-size: 75px;
   line-height: 21px;
-  color: rgba(5, 228, 248, 0.5215686275);
-  font-weight: 600;
+  color: #c7ac8f;
+  font-weight: 400;
   cursor: pointer;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
@@ -1629,7 +1630,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 320px;
+  max-width: 350px;
 }
 .feed-form input {
   padding-left: 10px;
@@ -1672,20 +1673,24 @@ textarea {
   color: #c7ac8f;
 }
 
+@media (max-width: 450px) {
+  .modal {
+    width: calc(100% - 40px);
+  }
+  .modal__close {
+    top: 110%;
+    right: 44%;
+  }
+  .feed-form {
+    max-width: 100%;
+  }
+}
 @media (max-width: 400px) {
   .modal {
     padding: 20px;
   }
   .modal__descr:not(:last-child) {
     margin-bottom: 20px;
-  }
-  .feed-form {
-    max-width: 220px;
-  }
-}
-@media (max-width: 365px) {
-  .modal__close {
-    right: -25px;
   }
 }
 @media (hover: hover) {

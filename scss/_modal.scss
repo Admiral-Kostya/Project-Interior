@@ -37,6 +37,7 @@
   border-radius: 10px;
   padding: 30px;
   background-color: #615f5f;
+  /*  width: 80%; */
   &__descr {
     text-align: center;
     font-family: "Inter";
@@ -52,10 +53,10 @@
     position: absolute;
     top: 0;
     right: -40px;
-    font-size: 50px;
+    font-size: 75px;
     line-height: 21px;
-    color: #05e4f885;
-    font-weight: 600;
+    color: #c7ac8f;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.5s all;
     &:hover {
@@ -66,7 +67,7 @@
 .feed-form {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
+  max-width: 350px;
   input {
     padding-left: 10px;
     padding-right: 10px;
@@ -97,6 +98,20 @@
     @include linkStyle(40px, 5px 36px, 18px, #c7ac8f);
   }
 }
+
+@media (max-width: 450px) {
+  .modal {
+    width: calc(100% - 40px);
+    &__close {
+      top: 110%;
+      right: 44%;
+    }
+  }
+  .feed-form {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 400px) {
   .modal {
     padding: 20px;
@@ -106,17 +121,8 @@
       }
     }
   }
-  .feed-form {
-    max-width: 220px;
-  }
 }
-@media (max-width: 365px) {
-  .modal {
-    &__close {
-      right: -25px;
-    }
-  }
-}
+
 @media (hover: hover) {
   .feed-form {
     &__button {

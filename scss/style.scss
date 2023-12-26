@@ -20,6 +20,12 @@
 @import "_blog.scss";
 @import "_reviews.scss";
 @import "_footer.scss";
+// Додаткові секції
+@import "_modal.scss";
+@import "_pageUp.scss";
+/* html {
+  scroll-behavior: smooth;
+} */
 body {
   font-family: "Kanit";
   background-color: $mainBgColor;

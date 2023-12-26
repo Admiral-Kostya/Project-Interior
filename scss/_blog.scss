@@ -51,13 +51,10 @@
       transition: transform 0.8s ease-in 0s;
     }
     &:nth-child(2) {
-      transition: transform 0.8s ease-in 0.8s;
+      transition: transform 0.8s ease-in 0.5s;
     }
     &:nth-child(3) {
-      transition: transform 0.8s ease-in 1.6s;
-    }
-    &:nth-child(4) {
-      transition: transform 0.8s ease-in 2.4s;
+      transition: transform 0.8s ease-in 0.8s;
     }
   }
   &__item._active {
@@ -86,7 +83,7 @@
       background-size: 80px 80px;
     }
     transform: scale(0);
-    transition: transform 0.8s ease-in 2.4s;
+    transition: transform 0.8s ease-in 0.5s;
   }
   &__decor._active {
     transform: scale(1);

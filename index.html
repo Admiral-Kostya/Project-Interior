@@ -20,25 +20,25 @@
             <div class="menu__body">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a href="#" class="menu__link">about us</a>
+                  <a href="#about" class="menu__link">about us</a>
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">gallery</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">blog</a>
+                  <a href="#blog" class="menu__link">blog</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">reviews</a>
+                  <a href="#reviews" class="menu__link">reviews</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link">contacts</a>
+                  <a data-modal href="#" class="menu__link">contacts</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="header__actions actions-header">
-            <button type="button" class="actions-header__phone">
+            <button data-modal type="button" class="actions-header__phone">
               <img src="img/header/phone.svg" alt="phone">
             </button>
             <button type="button" class="actions-header__basket-cart">
@@ -53,7 +53,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="main__hero hero">
+      <section id="up" class="main__hero hero">
         <div class="hero__container">
           <div class="hero__body body-hero">
             <h1 class=" anim-items body-hero__title">
@@ -66,7 +66,7 @@
               </p>
             </div>
             <div class=" anim-items body-hero__button-block">
-              <a href="#" class="body-hero__link">Get Quote Now</a>
+              <a data-modal href="#" class="body-hero__link">Get Quote Now</a>
               <a href="#" class="body-hero__link">Learn more</a>
             </div>
           </div>
@@ -78,7 +78,7 @@
           <img src="img/hero/decor1.svg" alt="decor1">
         </div>
       </section>
-      <section class="main__about about">
+      <section id="about" class="main__about about">
         <div class="about__container">
           <h2 class="anim-items about__title common-title">
             about us
@@ -113,6 +113,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                   </p>
                 </li>
+
               </ul>
             </div>
           </div>
@@ -222,7 +223,7 @@
           </div>
         </div>
       </section>
-      <section class="main__blog blog">
+      <section id="blog" class="main__blog blog">
         <div class="blog__container">
           <h2 class="blog__title common-title anim-items">
             Blog
@@ -273,7 +274,7 @@
           </div>
         </div>
       </section>
-      <section class="main__reviews reviews">
+      <section id="reviews" class="main__reviews reviews">
         <div class="reviews__container">
           <h2 class="reviews__title common-title anim-items">
             Reviews
@@ -401,7 +402,7 @@
                 <a href="#" class="body-footer__link">Reviews</a>
               </li>
               <li class="body-footer__item">
-                <a href="#" class="body-footer__link">Contact</a>
+                <a data-modal href="#" class="body-footer__link">Contact</a>
               </li>
             </ul>
           </div>
@@ -430,7 +431,19 @@
         </div>
       </div>
     </footer>
-
+    <div class="overlay">
+      <div class="modal" id="logIn">
+        <div data-close class="modal__close">&times;</div>
+        <div class="modal__descr">Please fill in the required fields!</div>
+        <form class="feed-form feed-form_modal" action="#" enctype="multipart/form-data" method="GET">
+          <input autocomplete="on" name="name" required placeholder="Your name" type="text" />
+          <input autocomplete="on" name="phone" required placeholder="Your phone" type="tel" />
+          <input autocomplete="on" name="email" required placeholder="Your email" type="email" />
+          <button type="submit" class="feed-form__button">Finish</button>
+        </form>
+      </div>
+    </div>
+    <a href="#up" class="pageup"></a>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <script src="js/script.js"></script>

@@ -104,3 +104,40 @@ $("a[href^='#']").click(function () {
 /* document.querySelector(".pageup").onclick = () => {
   window.scrollTo(pageYOffset, 0);
 }; */
+//------------------------------------ Simple Slider ----------------------------------------//
+
+const slides = document.querySelectorAll(".block-slider__image"),
+  prev = document.querySelector(".block-button__prev"),
+  next = document.querySelector(".block-button__next"),
+  current = document.querySelector("#current");
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  slides.forEach((item) => (item.style.display = "none"));
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("fade");
+  if (slides.length < 10) {
+    current.textContent = `0${slideIndex}`;
+  } else {
+    current.textContent = slideIndex;
+  }
+}
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+prev.addEventListener("click", () => {
+  plusSlides(-1);
+});
+next.addEventListener("click", () => {
+  plusSlides(1);
+});
